@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dual Envanter</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/envanter.css">
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="title" style="font-size: 24px;">Dual İletişim</span>
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="home.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Anasayfa</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="envanter.html">
+                        <span class="icon">
+                            <ion-icon name="archive-outline"></ion-icon>
+                        </span>
+                        <span class="title">Envanter</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="takvim.html">
+                        <span class="icon">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                        </span>
+                        <span class="title">Takvim</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="projeler.html">
+                        <span class="icon">
+                        <ion-icon name="clipboard-outline"></ion-icon>
+
+                        </span>
+                        <span class="title">Projeler</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="analiz.html">
+                        <span class="icon">
+                            <ion-icon name="pie-chart-outline"></ion-icon>
+                        </span>
+                        <span class="title">Analiz</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="analiz.html">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Ayarlar</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Çıkış Yap</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Arayınız...">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+            </div>
+
+            <!-- ======================= Cards ================== -->
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <!-- <a href="modal/urun.html"> -->
+                        <div class="numbers">Ürün Ekle</div>
+                        </a>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="archive-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">Pdf İndir</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="document-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">Stok Takip</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="cube-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">Projeler</div>
+                    </div>
+    
+                    <div class="iconBx">
+                        <ion-icon name="folder-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================ Order Details List ================= -->
+            <div class="details">
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Envanter Kontrol</h2>
+                    </div>
+                    <div class="productForm">
+                        <h2>Ürün Ekle</h2>
+                        <input type="text" id="productName" placeholder="Ürün Adı" required>
+                        <input type="number" id="productQuantity" placeholder="Adet" required>
+                        <input type="text" id="productCategory" placeholder="Kategori" required>
+                        <button id="addProduct">Ekle</button>
+                    </div>
+                
+                    <div class="productTable">
+                        <h2>Ürün Listesi</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Ürün Adı</td>
+                                    <td>Adet</td>
+                                    <td>Kategori</td>
+                                    <td>İşlemler</td>
+                                </tr>
+                            </thead>
+                            <tbody id="productList">
+                                <!-- Ürünler buraya eklenecek -->
+                            </tbody>
+                        </table>
+                </div>
+
+                <!-- ================= New Customers ================ -->
+                <div class="recentCustomers">
+                    <div class="cardHeader">
+                        <h2>Recent Customers</h2>
+                    </div>
+                </div>
+                       
+              
+
+    <!-- =========== Scripts =========  -->
+    <script src="../js/envanter.js"></script>
+    <script src="../js/header.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

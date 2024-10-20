@@ -1,0 +1,70 @@
+.productForm {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.productForm input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.productForm button {
+    padding: 10px;
+    background: #2a2185;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.productTable {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.productTable table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.productTable table thead {
+    background: #ffffff;
+    color: #fff;
+}
+
+.productTable table thead td {
+    padding: 10px;
+}
+
+.productTable table tbody tr {
+    border-bottom: 1px solid #ccc;
+}
+
+.productTable table tbody td {
+    padding: 10px;
+}
+
+.productTable table tbody tr:hover {
+    background: #f0f0f0;
+}
+
+.productTable .btn {
+    padding: 5px 10px;
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.productTable .btn.edit {
+    background: #3498db;
+}

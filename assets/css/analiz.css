@@ -1,0 +1,110 @@
+/* Modal'ın arkaplanı (gizli durumdayken görünmez olacak) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Yarı saydam siyah */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal kutusunun içeriği */
+.modal-content {
+    background-color: #ffffff; /* Beyaz arkaplan */
+    padding: 40px; /* İç boşluk */
+    border-radius: 12px; /* Yuvarlatılmış köşeler */
+    width: 90%; /* Ekranın %90'ı genişlik */
+    max-width: 600px; /* Maksimum genişlik */
+    text-align: center; /* Metni ortala */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+    transition: transform 0.3s, opacity 0.3s; /* Geçiş efektleri */
+}
+
+/* Kapatma butonu */
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 30px; /* Büyütülmüş yazı */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #000; /* Hover durumu */
+}
+
+.container-in {
+    max-width: 400px; /* Genişlik sınırı */
+    margin: auto; /* Ortala */
+    background: #ffffff; /* Beyaz arkaplan */
+    padding: 20px; /* İç boşluk */
+    border-radius: 10px; /* Yuvarlatılmış köşeler */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+}
+
+h1, h2 {
+    text-align: center; /* Metin ortala */
+    color: #333; /* Koyu gri metin */
+    margin-bottom: 15px; /* Alt boşluk */
+}
+
+form {
+    display: flex; /* Esnek kutu düzeni */
+    flex-direction: column; /* Dikey hizala */
+}
+
+label {
+    margin-top: 10px; /* Üst boşluk */
+    font-weight: 500; /* Daha kalın yazı */
+    color: #555; /* Orta gri metin */
+}
+
+input {
+    padding: 12px; /* İç boşluk */
+    margin-top: 5px; /* Üst boşluk */
+    border: 1px solid #ddd; /* Açık gri kenar */
+    border-radius: 5px; /* Yuvarlatılmış köşeler */
+    transition: border-color 0.3s; /* Kenar rengi geçiş efekti */
+}
+
+input:focus {
+    border-color: #28a745; /* Yeşil kenar rengi odaklandığında */
+    outline: none; /* Kenar çizgisi yok */
+}
+
+button {
+    margin-top: 15px; /* Üst boşluk */
+    padding: 12px; /* İç boşluk */
+    background-color: #28a745; /* Yeşil arkaplan */
+    color: white; /* Beyaz metin */
+    border: none; /* Kenar yok */
+    border-radius: 5px; /* Yuvarlatılmış köşeler */
+    cursor: pointer; /* İmleç değişimi */
+    font-weight: 600; /* Kalın yazı */
+    transition: background-color 0.3s; /* Arkaplan rengi geçiş efekti */
+}
+
+button:hover {
+    background-color: #218838; /* Koyu yeşil hover efekti */
+}
+
+table {
+    width: 100%; /* Tam genişlik */
+    margin-top: 20px; /* Üst boşluk */
+    border-collapse: collapse; /* Kenarları birleştir */
+}
+
+th, td {
+    border: 1px solid #eee; /* Çok açık gri kenar */
+    padding: 12px; /* İç boşluk */
+    text-align: left; /* Metin sola yasla */
+}
+
+th {
+    background-color: #f9f9f9; /* Çok açık gri arkaplan */
+    font-weight: 600; /* Kalın yazı */
+}

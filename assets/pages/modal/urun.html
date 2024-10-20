@@ -1,0 +1,78 @@
+<button id="openModalBtn">Ürün Ekle</button>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Ürün Ekle</h2>
+      <form id="productForm">
+        <label for="productName">Ürün Adı:</label><br>
+        <input type="text" id="productName" name="productName" required><br><br>
+
+        <label for="productPrice">Fiyat:</label><br>
+        <input type="number" id="productPrice" name="productPrice" required><br><br>
+
+        <label for="productDescription">Açıklama:</label><br>
+        <textarea id="productDescription" name="productDescription" required></textarea><br><br>
+
+        <button type="submit">Ürünü Ekle</button>
+      </form>
+    </div>
+  </div>
+  <script>
+  // Modal'ı açma ve kapama
+const modal = document.getElementById('myModal');
+const openModalBtn = document.getElementById('openModalBtn');
+const closeModal = document.getElementsByClassName('close')[0];
+const productForm = document.getElementById('productForm');
+
+openModalBtn.onclick = function() {
+  modal.style.display = 'block';
+}
+
+closeModal.onclick = function() {
+  modal.style.display = 'none';
+}
+
+// Modal dışına tıklanınca kapatma
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+}
+
+// Formun veritabanına eklenmesi
+productForm.addEventListener('submit', function(event) {
+  event.preventDefault(); // Formun sayfayı yenilemesini önler
+
+  // Form verilerini al
+  const productName = document.getElementById('productName').value;
+  const productPrice = document.getElementById('productPrice').value;
+  const productDescription = document.getElementById('productDescription').value;
+
+  // Veriyi JSON formatında hazırlıyoruz
+  const productData = {
+    name: productName,
+    price: productPrice,
+    description: productDescription
+  };
+
+  // Veritabanına gönderme (örnek bir fetch ile backend API'ye gönderiyoruz)
+  fetch('https://example.com/api/products', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(productData)
+  })
+  .then(response => response.json())
+  .then(data => {
+    alert('Ürün başarıyla eklendi!');
+    modal.style.display = 'none';
+  })
+  .catch(error => {
+    alert('Bir hata oluştu: ' + error);
+  });
+});
+
+</script>
